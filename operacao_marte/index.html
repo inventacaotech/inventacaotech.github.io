@@ -16,21 +16,21 @@
 			h = h.substr(0,2) + ":" + h.substr(2,2) + ":00";
 			var ticket_date = new Date(d + "T" + h);
 			var time_left = ticket_date - Date.now();
-			console.log(time_left);
+			//console.log(time_left);
 			var days_left = Math.trunc(time_left / (1000 * 60 * 60 * 24));
 			console.log(days_left);
 			time_left = time_left % (1000 * 60 * 60 * 24);
 			var hours_left = Math.trunc(time_left / (1000 * 60 * 60));
-			console.log(hours_left);
+			//console.log(hours_left);
 			time_left = time_left % (1000 * 60 * 60);
 			var mins_left = Math.trunc(time_left / (1000 * 60));
-			console.log(mins_left);
+			//console.log(mins_left);
 			time_left = time_left % (1000 * 60);
 			var secs_left = Math.trunc(time_left / (1000));
-			console.log(secs_left);
+			//console.log(secs_left);
 			time_left = time_left % (1000);
 			var msecs_left = time_left;
-			console.log(msecs_left);
+			//console.log(msecs_left);
 			if (msecs_left < 0) 
 			{
 				days_left = 0;
