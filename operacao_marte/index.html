@@ -37,13 +37,13 @@
 				hours_left = 0;
 				mins_left = 0;
 			}
-			this.el.setAttribute('text-geometry', "value: " + days_left + "d " + hours_left + "h " + mins_left + "min; font: #exoFont; size: 0.13;");
+			this.el.setAttribute('text-geometry', "value: " + days_left + "d " + hours_left + "h " + mins_left + "min; font: #exoFont; size: 1;");
 		  }
 		})
 	</script>
   
   <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs vr-mode-ui="enabled: false" light="defaultLightsEnabled: false">
 		<a-assets>
 			<a-asset-item id="exoFont" src="fonts/Perfect_Regular.json"></a-asset-item>
 			<img id="pixels" src="images/pixels.png" />
@@ -55,21 +55,22 @@
 			alignment (centering) may be tricky; try calculating bounding box and repositioning.
 			for more info, see: https://www.npmjs.com/package/aframe-text-geometry-component
 		 -->
-		<a-light type="directional" position="0 0 0" rotation="-90 0 0" target="#directionaltarget">
-		  <a-entity id="directionaltarget" position="0 1 0"></a-entity>
-		</a-light>
+		<!-- <a-light type="directional" position="-5 8 3" rotation="-90 0 0" target="#directionaltarget" intensity="0.1" color="#0F0"> -->
+		  <!-- <a-entity id="directionaltarget" position="0 1 0"></a-entity> -->
+		<!-- </a-light> -->
+		<!-- <a-entity light="type: directional; color: #0F0; intensity: 0.6" position="-0.5 1 1"></a-entity> -->
 		<a-entity displaycountdown text-geometry=""
-			material="color: yellow; src: #pixels; repeat: 0.5 0.5;" 
+			material="color: #595159; src: #pixels; repeat: 0.5 0.5;" 
 			rotation="-40 0 0"
-			position="-0.6 1.5 0.25"
-			scale="1 1 0.5">
+			position="-0.4 1.1 0.7"
+			scale="0.08 0.08 0.25">
 		</a-entity>
 	
         <a-entity
           position="0 0 0"
 		  animation-mixer="loop: repeat"
           scale="0.3 0.3 0.3"
-          gltf-model="src: url(assets/holo15.glb);"
+          gltf-model="src: url(assets/holo17.glb);"
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
