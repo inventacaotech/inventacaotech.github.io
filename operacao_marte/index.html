@@ -37,8 +37,7 @@
 				hours_left = 0;
 				mins_left = 0;
 			}
-			this.el.setAttribute('text-geometry', "value: " + days_left + "d " + hours_left + "h " + mins_left + "min; font: #exoFont; size: 0.13; align: center;");
-			console.log(this.el.width);
+			this.el.setAttribute('text-geometry', "value: " + days_left + "d " + hours_left + "h " + mins_left + "min; font: #exoFont; size: 0.13;");
 		  }
 		})
 	</script>
@@ -49,7 +48,7 @@
 			<a-asset-item id="exoFont" src="fonts/Perfect_Regular.json"></a-asset-item>
 			<img id="pixels" src="images/pixels.png" />
 		</a-assets>
-      <a-marker preset="hiro">
+      <a-marker type="pattern" url="images/pattern-MarkerOperacaoMarte_centro.patt">
 		<!-- 
 			using aframe-text-geometry component
 			can set: bevelSize, bevelThickness, curveSegments, font, height, size, style, value.
@@ -62,7 +61,7 @@
 		<a-entity displaycountdown text-geometry=""
 			material="color: yellow; src: #pixels; repeat: 0.5 0.5;" 
 			rotation="-40 0 0"
-			position="0 1.5 0.25"
+			position="-0.6 1.5 0.25"
 			scale="1 1 0.5">
 		</a-entity>
 	
