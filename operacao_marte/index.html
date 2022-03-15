@@ -31,6 +31,12 @@
 			time_left = time_left % (1000);
 			var msecs_left = time_left;
 			console.log(msecs_left);
+			if (msecs_left < 0) 
+			{
+				days_left = 0;
+				hours_left = 0;
+				mins_left = 0;
+			}
 			this.el.setAttribute('text-geometry', "value: " + days_left + "d " + hours_left + "h " + mins_left + "min; font: #exoFont; size: 0.13;");
 		  }
 		})
