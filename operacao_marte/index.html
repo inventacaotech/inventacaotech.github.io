@@ -48,6 +48,7 @@
 			<a-asset-item id="exoFont" src="fonts/Perfect_Regular.json"></a-asset-item>
 			<img id="pixels" src="images/pixels.png" />
 		</a-assets>
+		
       <a-marker type="pattern" url="assets/pattern-MarkerOperacaoMarte.patt">
 		<!-- 
 			using aframe-text-geometry component
@@ -55,10 +56,6 @@
 			alignment (centering) may be tricky; try calculating bounding box and repositioning.
 			for more info, see: https://www.npmjs.com/package/aframe-text-geometry-component
 		 -->
-		<!-- <a-light type="directional" position="-5 8 3" rotation="-90 0 0" target="#directionaltarget" intensity="0.1" color="#0F0"> -->
-		  <!-- <a-entity id="directionaltarget" position="0 1 0"></a-entity> -->
-		<!-- </a-light> -->
-		<!-- <a-entity light="type: directional; color: #0F0; intensity: 0.6" position="-0.5 1 1"></a-entity> -->
 		<a-entity displaycountdown text-geometry=""
 			material="color: #595159; src: #pixels; repeat: 0.5 0.5;" 
 			rotation="-40 0 0"
@@ -73,6 +70,27 @@
           gltf-model="src: url(assets/holo17.glb);"
         ></a-entity>
       </a-marker>
+	  
+	<!-- ------------------------------------------------------------- -->
+	<!-- -   UNIBES	  												 - -->
+	<!-- ------------------------------------------------------------- -->
+
+	  <a-marker type="pattern" url="assets/pattern-marker-unibes.patt">
+		<a-entity displaycountdown text-geometry=""
+			material="color: #595159; src: #pixels; repeat: 0.5 0.5;" 
+			rotation="-90 0 0"
+			position="-0.35 1.4 0.05"
+			scale="0.08 0.08 0.25">
+		</a-entity>
+	
+        <a-entity
+          position="0 0 0"
+		  animation-mixer="loop: repeat"
+          scale="0.3 0.3 0.3"
+          gltf-model="src: url(assets/holo_vert2.glb);"
+        ></a-entity>
+      </a-marker>
+	  
       <a-entity camera></a-entity>
     </a-scene>
   </body>
